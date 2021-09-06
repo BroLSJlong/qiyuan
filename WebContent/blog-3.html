@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>好友动态</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i%7CQuicksand:300,400,500,600,700%7CRoboto:400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- nice-select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swipper css link -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
+
+  <iframe src="header.html" width="100%" height="580px" frameborder="no" border="0" marginwidth="0" ></iframe>
+
+    <a href="#" class="scrollToTop"><i class="fas fa-heart"></i></a>
+
+    <!-- breadcrumb-section start -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i class="flaticon-house"></i>Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page" onclick="fabu()">发布动态</li>
+				<script type="text/javascript">
+					function fabu(){
+						location = "/qiyuan/adddynamic.html";
+					}
+				</script>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- breadcrumb-section end -->
+
+
+    <!-- blog-section start -->
+    <section class="blog-section ptb-120">
+        <div class="container">
+            <div class="row justify-content-center ml-b-30">
+                <div id="dynamicshow" class="col-lg-4 col-md-6 col-sm-8 mrb-30 wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="1s">
+                    
+                </div>
+            </div>
+            <div class="row justify-content-center mrt-60">                
+                <ul class="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- blog-section start -->
+
+
+    <!-- newslatter-section start -->
+    <section class="newslatter-section ptb-120 bg-overlay-primary bg_img" data-background="assets/images/news.png">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <div class="newslatter-content mb-30 wow fade-in-up" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h2 class="title">Subscribe Our Newslatter</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <form class="newslatter-form wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Enter email address">
+                        </div>
+                        <button type="submit" class="subscribe-btn icon-gradient"><i class="flaticon-send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- newslatter-section end -->
+
+	<!-- footer -->
+	<iframe src="footer.html" align="center"  width="100%"  frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+<!-- jquery -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- migarate-jquery -->
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<!-- bootstrap js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- magnific-popup js -->
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<!-- isotope -->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!-- nice-select js-->
+<script src="assets/js/jquery.nice-select.js"></script>
+<!-- swipper js -->
+<script src="assets/js/swiper.min.js"></script>
+<!-- waypoints js link -->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<!-- counterup js -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- wow js file -->
+<script src="assets/js/wow.min.js"></script>
+<!-- main -->
+<script src="assets/js/main.js"></script>
+
+<script>
+	var src="";
+	$(function(){	
+		user = sessionStorage.getItem("user");
+		user = JSON.parse(user);
+		
+		if(null != user && "" != user){
+			$.post("/qiyuan/FriendController/list.do",{"idCard":user.idCard},function(listId){
+				for(var i = 0; i < listId.length; i++){
+					var fIdCard = listId[i].fIdCard;
+					select(fIdCard);
+				}
+				});
+		}else{
+			location = "/qiyuan/signin.html";
+		} 
+		
+	});
+	
+	
+	function select(fIdCard){
+		$.post("/qiyuan/DynamicController/select.do",{"idCard":fIdCard},function(dynamics){
+				if(null != dynamics && dynamics.length > 0){
+					count = 0;
+					j = -1;
+					list = dynamics;
+					for(i = 0; i < dynamics.length; i++){
+						if (null == dynamics[i].thumb) {dynamics[i].thumb = "0";}
+						$.post("/qiyuan/UserController/selectuserName.do",{idCard:dynamics[i].idCard},function(fuser){
+							j++;
+							 $.post("/qiyuan/DynamicDetailController/select.do",{"dynamicId":list[j].dynamicId},function(dynamicDetail){
+								src = "/qiyuan/imgs/"+dynamicDetail[0].imgId;
+								node1 = "<br><p>"+"用户："+fuser.userName+"</p>";
+								node2 = "<div class=\'blog-item\'>" +
+					                   "<div class=\'blog-thumb\'>" +
+					                    "<img src=\'"+src+"\' alt=\'blog\'>" +
+					                	"</div>" +
+						               "<div class=\'blog-content\'>" +
+						                   "<h3 class=\'title\'>" +
+										   "<a  onclick=\'up(&quot;"+list[count].dynamicId+"&quot;)\'>" +list[count].content+
+										   "</a></h3>" +
+						                    "<ul class=\'blog-content-list\'>" +
+						                        "<li><i class=\'far fa-heart\'></i><span>发布时间："+ list[count].time+"</span></li>" +
+						                        "<li><i class=\'far fa-comment-alt\'></i><span>点赞数"+list[count].thumb+"</span></li>" +
+						                    "</ul></div></div>" ;
+						    		$("#dynamicshow").append(node1+node2);
+						    		count++;
+									},"json");
+						});
+					}
+				}
+			},"json")
+	}
+		
+	function up(dynamicId){
+		window.location.href="blog-details.html?valus="+dynamicId;
+	}
+</script>
+</body>
+</html>

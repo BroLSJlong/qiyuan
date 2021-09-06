@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息修改</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i%7CQuicksand:300,400,500,600,700%7CRoboto:400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- nice-select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swipper css link -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
+
+    <!-- header-section start -->
+   <iframe src="header.html" width="100%" height="580px" frameborder="no" border="0" marginwidth="0" ></iframe>
+
+    <a href="#" class="scrollToTop"><i class="fas fa-heart"></i></a>
+
+    <!-- breadcrumb-section start -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i class="flaticon-house"></i>主页</a></li>
+                <li class="breadcrumb-item"><a href="member.html">成员</a></li>
+                <li class="breadcrumb-item active" aria-current="page">成员详情</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- breadcrumb-section end -->
+
+
+    <!-- about-story-section start -->
+    <section class="about-story-section pd-t-120">
+        <div class="container">
+            <div class="row justify-content-center ml-b-30">
+                <div class="col-lg-12 mrb-30">
+                    <div class="about-story-area about-story-area-two d-flex flex-wrap align-items-center">
+                        <div class="about-story-thumb">
+                            <img src="" alt="story" id="img1">
+                        </div>
+                        <div class="about-story-content-two">
+                            <div class="about-story-content-body-two">
+                            <!-- 名片展示 -->
+                                <h3 class="title">
+                               <div class="member-facilities">
+                               <input type="text" class="second" id="name2" value="" />
+                               </div>
+                                 </h3>
+                                <span class="sub-title" id="age2"></span>
+                                 <input type="text" class="" id="description1"/>
+                                 
+                                <div class="about-story-content-footer d-flex flex-wrap justify-content-between">
+                                    <ul class="footer-social-two">
+                                        <li></li>
+                                         <li></li>
+                                          <li></li>
+                                           <li></li>
+                                    </ul>
+                                    <ul class="team-wish-list">
+                                        <li><i class="fas fa-heart color-red"  onclick="addheart()" style="cursor:pointer"></i><span id="heart2" >25</span></li>
+                                        <li><i class="fas fa-star color-yellow" onclick="addxing()" style="cursor:pointer"></i><span id="xing2">48</span></li>
+                                        <li><i class="fas fa-thumbs-up color-curious-blue" onclick="addzan()" style="cursor:pointer"></i><span id="zan2">56</span></li>
+                                        <li><i class="fas fa-thumbs-down color-curious-blue" onclick="addnzan()" style="cursor:pointer"></i><span id="nzan2">21</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about-story-section end -->
+
+
+<!-- 用户信息 -->
+    <!-- member-details-section start -->
+    <section class="member-details-section ptb-120">
+        <div class="container">
+            <div class="member-details-area ml-b-10">
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-book"></i>
+                            <span class="first">昵称</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input type="text" class="second" id="userName1" />
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-user"></i>
+                            <span class="first">性别</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input class="second" id="sex1">
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-calendar-minus"></i>
+                            <span class="first">年龄(岁)</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input type="text" class="second" id="age1" />
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-globe"></i>
+                            <span class="first">语言</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input type="text" class="second" id="language1"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="first" >地区</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input class="" id="area1" />
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-ruler"></i>
+                            <span class="first">身高</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input type="text" class="second" id="height1"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-calendar-minus"></i>
+                            <span class="first">出生日期</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input type="text" class="second" id="born1" />
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-glass-martini-alt"></i>
+                            <span class="first">手机号</span>
+                        </div>
+                        <div class="member-facilities">
+                        	<input type="text" class="second" id="phone1">
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-user"></i>
+                            <span class="first">目前状态</span>
+                        </div>
+                        <div class="member-facilities">
+                           <input type="text" class="" id="state1"/>
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-eye"></i>
+                            <span class="first">身份证</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="idCard1"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-utensils"></i>
+                            <span class="first">喜欢的食物</span>
+                        </div>
+                        <div class="member-facilities">
+                            <input type="text" class="second" id="food1" />
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-bed"></i>
+                            <span class="first">孩子</span>
+                        </div>
+                        <div class="member-facilities">
+                           <input type="text" class="second" id="kid1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+				<input type="button" name="updates" id="updates" onclick="userUpdate()" value="确定修改" />
+        </div>
+    </section>
+
+    <!-- footer -->
+	<iframe src="footer.html" align="center"  width="100%" height="515px" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+	
+<!-- jquery -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- migarate-jquery -->
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<!-- bootstrap js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- magnific-popup js -->
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<!-- isotope -->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!-- nice-select js-->
+<script src="assets/js/jquery.nice-select.js"></script>
+<!-- swipper js -->
+<script src="assets/js/swiper.min.js"></script>
+<!-- waypoints js link -->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<!-- counterup js -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- wow js file -->
+<script src="assets/js/wow.min.js"></script>
+<!-- main -->
+<script src="assets/js/main.js"></script>
+<script type="text/javascript">
+	 user = sessionStorage.getItem("user");
+$(function(){
+	if(null != user && '' != user){
+		user = JSON.parse(user);
+		if(user.idCard != null && user.idCard != ''){
+			$("#userName1").val(user.userName);
+			$("#age2").html(user.age+"岁");
+			$("#name2").val(user.realName);
+			$("#idCard1").html(user.idCard);
+			$("#sex1").val(user.sex);
+			$("#food1").val(user.food);
+			$("#height1").val(user.height);
+			$("#kid1").val(user.kids);
+			$("#state1").val(user.state);
+			$("#age1").val(user.age);
+			$("#area1").val(user.area);
+			$("#realName1").val(user.realName);
+			$("#language1").val(user.language);
+			$("#born1").val(user.born);
+			$("#phone1").val(user.userPhone);
+			$("#description1").val(user.description);
+			$("#img1").attr("src","/qiyuan/imgs/"+user.imgId+"");
+		}
+	}else{
+		alert("获取用户信息失败！");
+		location = "/qiyuan/member-hwh.html";	// user为空，说明未登录，回到主页面
+	}
+	var t = user.description;
+	$(".title1").html(t);
+});
+
+//<!-- 点赞，收藏，爱心动态 -->
+function addheart(){
+	var heart = parseInt($("#heart2").html())+1;
+	$("#heart2").html(heart);
+}
+function addxing(){
+	var heart = parseInt($("#xing2").html())+1;
+	$("#xing2").html(heart);
+}
+function addzan(){
+	var heart = parseInt($("#zan2").html())+1;
+	$("#zan2").html(heart);
+}
+function addnzan(){
+	var heart = parseInt($("#nzan2").html())+1;
+	$("#nzan2").html(heart);
+}
+
+function userUpdate(){
+	alert("正在修改！");
+	
+	$.post("/qiyuan/UserController/updateUser.do",{ "idCard":$("#idCard1").html(),"description":$("#description1").val(),"kids":$("#kid1").val(),"sex":$("#sex1").val(),"area":$("#area1").val() ,"food":$("#food1").val(),"height":$("#height1").val(),"state":$("#state1").val(),"age":$("#age1").val(),"realName":$("#name2").val(),"language":$("#language1").val(),"born":$("#born1").val(),"userPhone":$("#phone1").val(),"userName":$("#userName1").val()},function(){
+		alert("修改成功");
+		user.idCard = $("#idCard1").html();
+		user.description = $("#description1").val();
+		user.kids = $("#kid1").val();
+		user.sex = $("#sex1").val();
+		user.area = $("#area1").val();
+		user.food = $("#food1").val();
+		user.height = $("#height1").val();
+		user.state = $("#state1").val();
+		user.age = $("#age1").val();
+		user.realName = $("#name2").val();
+		user.language = $("#language1").val();
+		user.born = $("#born1").val();
+		user.phone = $("#phone1").val();
+		user.userName = $("#userName1").val();
+		sessionStorage.setItem("user",JSON.stringify(user));
+		location = "/qiyuan/member-details-ljh.html";
+		},"Json");
+}
+</script>
+
+
+</body>
+</html>
+<!-- $.post("/qiyuan/UserController/updateUser.do",{ "idCard":$("#idCard1").html(),"kids":$("#kid1").val(),"sex":$("#sex1").html(),"area":$("#area1").val() ,"food":$("#food1").val(),"height":$("#height1").val(),"state":$("#state1").val(),"age":$("#age1").val(),"realName":$("#realName1").val(),"language":$("#language1").val(),"born":$("#born1").val(),"userPhone":$("#phone1").val()},function(){
+		alert("修改成功");
+		},"Json"); -->

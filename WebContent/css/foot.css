@@ -1,0 +1,76 @@
+.footer{
+    background-color: #f3f3f3;
+    padding: 30px 0 30px 0;
+	height: 200px;
+}
+.footer_container {
+	margin-left: 35%;
+	margin-top: 20px;
+}
+.column{
+	position: absolute;
+	height: 100px;
+}
+.footer .icon_beian{
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: -326px 0;
+}
+.footer .icon_kexin{
+    display: block;
+    width: 108px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.footer .icon_anquan{
+    display: block;
+    width: 107px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: -219px 0;
+}
+.footer .icon_shiming{
+    display: block;
+    width: 108px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: -110px 0;
+}
+.footer .icon_qq{
+    display: inline-block;
+    width: 196px;
+    height: 22px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+.size_14 {
+    font-size: 14px;
+}
+.rgb_35{
+    color: #353535;
+}
+.padding_10_b {
+    padding-bottom: 10px;
+}
+.rgb_fe6{
+    color: #FE6F8C;
+}
+p, span, li {
+    text-transform: capitalize;
+}
+span {
+    display: inline-block;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.size_12 {
+    font-size: 12px;
+}

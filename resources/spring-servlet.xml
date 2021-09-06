@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+          					">
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+     
+    <!-- DataSource 配置-->
+	<bean class="com.alibaba.druid.pool.DruidDataSource"  id="dataSource">
+		<property name="driverClassName" value="${jdbc.driver}" />	
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.pwd}"/>
+		<!-- 初始化连接数 -->  
+        <property name="initialSize" value="${pool.initialSize}" />  
+        <!-- 最大并发连接数 -->  
+        <property name="maxActive" value="${pool.maxActive}" />  
+        <!-- 最小空闲连接数 -->  
+        <property name="minIdle" value="${pool.minIdle}" />  
+        <!-- 获取连接最大等待时间 -->  
+        <property name="maxWait" value="${pool.maxWait}" />  
+	</bean>
+	<!-- 事务管理：配置可省略 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- mybatis 配置 -->
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.team7.qiyuan.mapper" />
+    </bean> 
+	
+	<!-- Spring IOC 配置：对通过注解向IOC注册的bean进行扫描 -->
+	<context:component-scan base-package="com.team7.qiyuan" />
+	
+	<!-- Spring MVC 配置：启动注解 -->
+	<mvc:annotation-driven/>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">   
+		<property name="prefix" value="/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!--上传文件的最大大小(4M)，单位为字节 --> 
+		<property name="maxUploadSize" value="4194304" />
+		<!-- 上传文件的编码 -->
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+</beans>

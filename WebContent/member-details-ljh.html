@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息一览</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i%7CQuicksand:300,400,500,600,700%7CRoboto:400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- nice-select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swipper css link -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
+
+    <iframe src="header.html" width="100%" height="580px" frameborder="no" border="0" marginwidth="0" ></iframe>
+
+    <a href="#" class="scrollToTop"><i class="fas fa-heart"></i></a>
+
+    <!-- about-story-section start -->
+    <section class="about-story-section pd-t-120">
+        <div class="container">
+            <div class="row justify-content-center ml-b-30">
+                <div class="col-lg-12 mrb-30">
+                    <div class="about-story-area about-story-area-two d-flex flex-wrap align-items-center">
+                        <div class="about-story-thumb">
+                            <img  alt="story" id="picture">
+                        </div>
+                        <div class="about-story-content-two">
+                            <div class="about-story-content-body-two">
+                                <h3 class="title" id="name1"></h3>
+                                <span class="sub-title" id="age2"></span>
+                                <p id="description1">故乡在望月剑庐，这里是天然的一把剑，远远望去竟要被割裂开来一样！不喜欢剑的武者最好远离这座剑庐，莫被它无端的收了性命。。</p>
+                                <div class="about-story-content-footer d-flex flex-wrap justify-content-between">
+                                    <ul class="footer-social-two">
+                                        <li><a href="/qiyuan/PreInfo.html">修改</a></li>
+                                         <li><a href="#tupian">照片</a></li>
+                                          <li><a href="#friend">寻友</a></li>
+                                           <li><a href="/qiyuan/addImg.html">加照</a></li>
+                                    </ul>
+                                    <ul class="team-wish-list">
+                                        <li><i class="fas fa-heart color-red"  onclick="addheart()" style="cursor:pointer"></i><span id="heart2" ></span></li>
+                                        <li><i class="fas fa-star color-yellow" onclick="addxing()" style="cursor:pointer"></i><span id="xing2"></span></li>
+                                        <li><i class="fas fa-thumbs-up color-curious-blue" onclick="addzan()" style="cursor:pointer"></i><span id="zan2"></span></li>
+                                        <li><i class="fas fa-thumbs-down color-curious-blue" onclick="addnzan()" style="cursor:pointer"></i><span id="nzan2"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about-story-section end -->
+
+
+    <!-- member-details-section start -->
+    <section class="member-details-section ptb-120">
+        <div class="container">
+            <div class="member-details-area ml-b-10">
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-book"></i>
+                            <span class="first">昵称</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="name2">1</span>
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-user"></i>
+                            <span class="first">性别</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="sex1">男</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-calendar-minus"></i>
+                            <span class="first">年龄</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="age1">21 岁</span>
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-globe"></i>
+                            <span class="first">语言</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="language1">英语</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="first" >地区</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="area1">来宾</span>
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-ruler"></i>
+                            <span class="first">身高</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="height1">189 cm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-calendar-minus"></i>
+                            <span class="first">出生日期</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="born1">2000.7.2</span>
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-glass-martini-alt"></i>
+                            <span class="first">手机号</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="phone1"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-user"></i>
+                            <span class="first">目前状态</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="state1">单身</span>
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-eye"></i>
+                            <span class="first">身份证</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="idCard1">11111111111</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-details-item-area d-flex flex-wrap mrb-10">
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-utensils"></i>
+                            <span class="first">喜欢的食物</span>
+                        </div>
+                        <div class="member-facilities">
+                            <span class="second" id="food1">猪鞭</span>
+                        </div>
+                    </div>
+                    <div class="member-details-single-item sec-bg d-flex flex-wrap">
+                        <div class="member-facilities">
+                            <i class="fas fa-bed"></i>
+                            <span class="first">孩子</span>
+                        </div>
+                        <div class="member-facilities" id="tupian">
+                            <span class="second" id="kids1">没有</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery-section start -->
+    <section class="gallery-section pd-t-120 bg-overlay-white-two bg_img" data-background="assets/images/gallery/portfolio-bg.png" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <div class="section-header wow fade-in-up" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h2 class="section-title">我的照片</h2>
+                        <p>姿态属于自己，年轻永不落伍！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 pl-0 pr-0">
+                    <div class="gallery-slider" >
+                        <div class="swiper-wrapper" id="table2">
+                                    
+                                  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery-section end -->
+
+
+    <!-- team-section start -->
+    <section class="team-section pd-t-120" id="friend">
+        <div class="container" >
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <div class="section-header wow fade-in-up" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h2 class="section-title" >更多好友</h2>
+                        <p>按照你的个人喜好，推荐更多的朋友！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center ml-b-30" id="table1">
+            
+           </div>
+        </div>
+    </section>
+    <!-- team-section end -->
+
+
+    <!-- brand-section start -->
+    <div class="brand-section ptb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="brand-wrapper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-1.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-2.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-3.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-4.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-5.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand-section end -->
+
+	<!-- footer -->
+	<iframe src="footer.html" align="center"  width="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+<!-- jquery -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- migarate-jquery -->
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<!-- bootstrap js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- magnific-popup js -->
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<!-- isotope -->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!-- nice-select js-->
+<script src="assets/js/jquery.nice-select.js"></script>
+<!-- swipper js -->
+<script src="assets/js/swiper.min.js"></script>
+<!-- waypoints js link -->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<!-- counterup js -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- wow js file -->
+<script src="assets/js/wow.min.js"></script>
+<!-- main -->
+<script src="assets/js/main.js"></script>
+<script type="text/javascript">
+	var ax = 25;
+	$("#heart2").html(ax);
+	var xx = 25;
+	$("#xing2").html(xx);
+	var dz = 25;
+	$("#zan2").html(dz);
+	var bz = 25;
+	$("#nzan2").html(bz);
+	var fdz = 13;
+$(function(){
+	var user = sessionStorage.getItem("user");
+	if(null != user && '' != user){
+		user = JSON.parse(user);
+		if(user.idCard != null && user.idCard != ''){
+			$("#name2").html(user.userName);
+			$("#name1").html(user.realName);
+			$("#age1").html(user.age+"岁");
+			$("#age2").html(user.age+"岁");
+			$("#description1").html(user.description);
+			$("#sex1").html(user.sex);
+			$("#language1").html(user.language);
+			$("#height1").html(user.height);
+			$("#kids1").html(user.kids);
+			$("#food1").html(user.food);
+			$("#state1").html(user.state);
+			$("#idCard1").html(user.idCard);
+			$("#born1").html(user.born);
+			$("#phone1").html(user.userPhone);
+			$("#area1").html(user.area);
+			$("#picture").attr("src","/qiyuan/imgs/"+user.imgId+"")
+		}
+	}else{
+		location = "/qiyuan/signin.html";	// user为空，说明未登录，回到主页面
+	}
+	
+	
+	dolist();
+	
+		
+});
+
+// 点赞,收藏,爱心动态
+function addheart(){
+	var heart = $("#heart2").html();
+	var heart1 = parseInt($("#heart2").html())+1;
+	if(heart == ax){
+	$("#heart2").html(heart1);
+	}else{
+    $("#heart2").html(heart-1);
+	}
+}
+function addxing(){
+	var xing = $("#xing2").html();
+	var xing1 = parseInt($("#xing2").html())+1;
+	if(xing == xx){
+	$("#xing2").html(xing1);
+	}else{
+    $("#xing2").html(xing-1);
+	}
+}
+function addzan(){
+	var zan = $("#zan2").html();
+	var zan1 = parseInt($("#zan2").html())+1;
+	if(zan == dz){
+	$("#zan2").html(zan1);
+	}else{
+    $("#zan2").html(zan-1);
+	}
+}
+function addnzan(){
+	var heart = $("#nzan2").html();
+	var heart1 = parseInt($("#nzan2").html())+1;
+	if(heart == ax){
+	$("#nzan2").html(heart1);
+	}else{
+    $("#nzan2").html(heart-1);
+	}
+}
+function addzan1(){
+	var heart = $("#doo1").html();
+	var heart1 = parseInt($("#doo1").html())+1;
+	if(heart == fdz){
+	$("#doo1").html(heart1);
+	}else{
+    $("#doo1").html(heart-1);
+	}
+}
+function addzan2(){
+	var heart = $("#doo2").html();
+	var heart1 = parseInt($("#doo2").html())+1;
+	if(heart == fdz){
+	$("#doo2").html(heart1);
+	}else{
+    $("#doo2").html(heart-1);
+	}
+}
+function addzan3(){
+	var heart = $("#doo3").html();
+	var heart1 = parseInt($("#doo3").html())+1;
+	if(heart == fdz){
+	$("#doo3").html(heart1);
+	}else{
+    $("#doo3").html(heart-1);
+	}
+}
+
+// 加载页面效果显示
+function dolist(){
+         // 推荐好友显示
+		var user = sessionStorage.getItem("user");
+		user = JSON.parse(user);
+	$.get("/qiyuan/UserController/selectUser.do",{"food":user.food},function(users){
+		var count = 1;
+		if(null != users && users.length > 0){
+			 for(i = 0; i < 4 && i < users.length; i++){
+				var user1 = users[i];
+				if(user.idCard == user1.idCard){
+					continue;
+				}else{
+					$("#table1").append($("<div class='col-lg-4 col-md-6 col-sm-8 mrb-30 wow fade-in-bottom' data-wow-duration='1s' data-wow-delay='0.5s'>")
+					 .append($("<div class='team-thumb'>")
+						.append($("<img src='/qiyuan/imgs/"+user1.imgId+"' alt='team' class='img13'>"))
+						.append($("<div class='team-thumb-overlay'>")
+						  .append($("<a class='image-popup' title='team image' href='#friend' onclick='addfriend"+count+"()'>")
+						  .append($("<i class='flaticon-add-1'>")))))
+					 .append($("<div class='team-details text-center' >")
+						.append($("<h3 class='title' id='fname"+i+"'>"))
+						.append($("<ul class='team-content'>")
+							.append($("<li id='farea"+i+"'>"))
+							.append($("<li id='fage"+i+"'>")))
+						.append($("<ul class='team-wish-list'>")
+						    .append($("<li >").append($("<i class='fas fa-heart color-red'>")).append($("<span id='foo"+count+"'>").html("未添加")))
+						    .append($("<li>").append($("<i class='fas fa-thumbs-up color-curious-blue' onclick='addzan"+i+"()' style='cursor:pointer'>")).append($("<span id='doo"+i+"'>")))
+						   )
+						)
+					)	
+					$("#fname"+i).html(user1.realName);
+					$("#farea"+i).html(user1.area);
+					$("#fage"+i).html(user1.age+"岁");
+					$("#doo"+i).html(fdz);
+				}
+				sessionStorage.setItem("user"+count,JSON.stringify(user1));
+				count++;
+			}
+			 $(".img13").css({ "min-width":"369px" ,"max-width":"369px" ,"min-height":"400px" ,"max-height":"400px"});
+		}
+	},"json")
+	// 照片动态
+	$.get("/qiyuan/ImgController/selectUserImg.do",{idCard:user.idCard},function(users){
+		var c = 1;
+		if(null != users && users.length > 0){
+			for(i = 0;i < users.length;i++){
+			var user2 = users[i];
+			$("#table2").append($("<div class='swiper-slide' style='width:471.5px;' data-swiper-slide-index=''>")
+			.append($("<div class='gallery-item'>")
+					.append($("<div class='gallery-thumb'>")
+							.append($("<img src='/qiyuan/imgs/"+user2.imgId+"' alt='gallery' class='img12' >")))
+							.append($("<div class='gallery-thumb-overlay'>")
+									.append($("<a href='#0'>").append($("<i class='fas fa-search'>")))
+									.append($("<div class='gallery-overlay-content text-center'>")
+											.append($("<h3 class='title' id='h"+i+"'></h3>"))
+											.append($("<ul class='overlay-list'>"))
+											  .append($("<li>")
+													  .append($("<i class='far fa-heart'>"))
+													  .append($("<span>").html(03)))
+											  .append($("<li>")
+													  .append($("<i class='far fa-comment-alt'>"))
+													  .append($("<span>").html(00))))
+					)
+				)
+			)
+				var t = user.description;
+			    $("#h"+i+"").html(t);
+			}
+			    $(".img12").css({ "min-width":"474px" ,"max-width":"474px" ,"min-height":"464px" ,"max-height":"464px"});
+		}
+	},"json")
+	
+	$.get("/qiyuan/FriendController/list.do",{"idCard":user.idCard},function(users){
+	var friend1 = sessionStorage.getItem("user1");
+	if(friend1 != null && friend1 != "")friend1 = JSON.parse(friend1);
+	var friend2 = sessionStorage.getItem("user2");
+	if(friend2 != null && friend2 != "")friend2 = JSON.parse(friend2);
+	var friend3 = sessionStorage.getItem("user3");
+	if(friend3 != null && friend3 != "")friend3 = JSON.parse(friend3);
+	if(null != users && users.length > 0){
+		for(i=0;i<users.length;i++){
+			var f = users[i];
+		if((friend1 != null && friend1 != "") &&f.fIdCard == friend1.idCard){
+			$("#foo1").html("已添加");
+		}
+		if((friend2 != null && friend2 != "") && f.fIdCard == friend2.idCard){
+			$("#foo2").html("已添加");
+		}
+		if((friend3 != null && friend3 != "") && f.fIdCard == friend3.idCard){
+			$("#foo3").html("已添加");
+		}
+	}
+	}
+ },"json")
+}
+
+
+function addfriend1(){
+	var user = sessionStorage.getItem("user");
+	user = JSON.parse(user);
+	var friend1 = sessionStorage.getItem("user1");
+	friend1 = JSON.parse(friend1);
+	if($("#foo1").html() == "已添加"){
+		alert("你们已经是朋友了");
+	}else{
+	$.get("/qiyuan/FriendController/add.do",{"idCard":user.idCard,"fIdCard":friend1.idCard},function(yes){
+			if(yes){
+				alert("添加成功！")
+				location = "/qiyuan/member-details-ljh.html";
+			}else{
+				alert("添加失败！");
+			}
+		},"json")
+	}
+	
+	}
+
+
+function addfriend2(){
+	var user = sessionStorage.getItem("user");
+	user = JSON.parse(user);
+	var friend2 = sessionStorage.getItem("user2");
+	friend2 = JSON.parse(friend2);
+	if($("#foo2").html() == "已添加"){
+		alert("你们已经是朋友了");
+	}else{
+	$.get("/qiyuan/FriendController/add.do",{"idCard":user.idCard,"fIdCard":friend2.idCard},function(yes){
+			if(yes){
+				alert("添加成功！")
+				location = "/qiyuan/member-details-ljh.html";
+			}else{
+				alert("添加失败！");
+			}
+		},"json")
+	}
+	}
+
+
+function addfriend3(){
+	var user = sessionStorage.getItem("user");
+	user = JSON.parse(user);
+	var friend3 = sessionStorage.getItem("user3");
+	friend3 = JSON.parse(friend3);
+	if($("#foo3").html() == "已添加"){
+		alert("你们已经是朋友了");
+	}else{
+	$.get("/qiyuan/FriendController/add.do",{"idCard":user.idCard,"fIdCard":friend3.idCard},function(yes){
+			if(yes){
+				alert("添加成功！")
+				location = "/qiyuan/member-details-ljh.html";
+			}else{
+				alert("添加失败！");
+			}
+		},"json")
+	}
+	}
+</script>
+
+</body>
+</html>

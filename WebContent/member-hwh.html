@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7缘</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i%7CQuicksand:300,400,500,600,700%7CRoboto:400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- nice-select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swipper css link -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- 尾部 -->
+    <link rel="stylesheet" type="text/css" href="css/foot.css"/>
+</head>
+<body>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
+
+	<iframe src="header.html" width="100%" height="570px" frameborder="no" border="0" marginwidth="0" ></iframe>
+
+    <a href="#" class="scrollToTop"><i class="fas fa-heart"></i></a>
+	
+    <!-- breadcrumb-section start -->
+    <div class="breadcrumb-area">
+        <div class="container" style="margin-top: -8px;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i class="flaticon-house"></i>主页</a></li>
+                <li class="breadcrumb-item active" aria-current="page">相遇“测试拿名：<span id="user_name"></span>”</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- breadcrumb-section end -->
+
+
+    <!-- team-section start -->
+    <section class="team-section ptb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="member-search-area">
+                        <form class="member-search-form" name="form1">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6 mrb-10">
+                                    <div class="form-group">
+                                        <select  name="language" >
+                                            <option value="语言">语言(不限)</option>
+                                            <option>普通话</option>
+                                            <option>粤语</option>
+											<option>壮语</option>
+											<option>日语</option>
+											<option>英语</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 mrb-10">
+                                    <div class="form-group form-group-two">
+                                        <input type="text" name="food" placeholder="喜欢的美食">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 mrb-10">
+                                    <div class="form-group">
+                                        <select name="state" >
+											<option value="婚恋">婚恋情况(不限)</option>
+												<option value="1" >单身</option>
+												<option value="2" >丧偶</option>
+												<option value="3" >离异</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 mrb-10">
+                                    <div class="form-group">
+                                        <input type="button" id="job_submit" value="搜索" onclick="dolist()" style="background-image: -moz-linear-gradient(20deg, #ff36a9 0%, #9459d4 41%, #297bff 77%);color: white;text-transform: uppercase;font-weight: 600;">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center ml-b-30">
+     
+     
+      <!--   死图~！
+                <div class="col-lg-4 col-md-6 col-sm-8 mrb-30 wow fade-in-bottom" data-wow-duration="1s" >
+                    <div class="team-thumb">
+                        <img src="assets/images/team/team-1.png" alt="team">
+                        <div class="team-thumb-overlay">
+                            <a class="image-popup" title="team image" href="assets/images/team/team-1.png"><i class="flaticon-add-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-details text-center">
+                        <h3 class="title"><a href="member-details.html">Marina Kubora</a></h3>
+                        <ul class="team-content">
+                            <li>Mellbourne , Australia</li>
+                            <li>25 years Old</li>
+                        </ul>
+                        <ul class="team-wish-list">
+                            <li><i class="fas fa-heart color-red"></i><span>25</span></li>
+                            <li><i class="fas fa-star color-yellow"></i><span>48</span></li>
+                            <li><i class="fas fa-thumbs-up color-curious-blue"></i><span>56</span></li>
+                            <li><i class="fas fa-thumbs-down color-curious-blue"></i><span>21</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 col-sm-8 mrb-30 wow fade-in-bottom" data-wow-duration="1s" >
+                    <div class="team-thumb">
+                        <img src="assets/images/team/team-2.png" alt="team">
+                        <div class="team-thumb-overlay">
+                            <a class="image-popup" title="team image" href="assets/images/team/team-2.png"><i class="flaticon-add-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-details text-center">
+                        <h3 class="title"><a href="member-details.html">Bartin Nikoriyas</a></h3>
+                        <ul class="team-content">
+                            <li>Mellbourne , Australia</li>
+                            <li>30 years Old</li>
+                        </ul>
+                        <ul class="team-wish-list">
+                            <li><i class="fas fa-heart color-red"></i><span>25</span></li>
+                            <li><i class="fas fa-star color-yellow"></i><span>48</span></li>
+                            <li><i class="fas fa-thumbs-up color-curious-blue"></i><span>56</span></li>
+                            <li><i class="fas fa-thumbs-down color-curious-blue"></i><span>21</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 col-sm-8 mrb-30 wow fade-in-bottom" data-wow-duration="1s" >
+                    <div class="team-thumb">
+                        <img src="assets/images/team/team-3.png" alt="team">
+                        <div class="team-thumb-overlay">
+                            <a class="image-popup" title="team image" href="assets/images/team/team-3.png"><i class="flaticon-add-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-details text-center">
+                        <h3 class="title"><a href="member-details.html">monika chunityra</a></h3>
+                        <ul class="team-content">
+                            <li>Mellbourne , Australia</li>
+                            <li>32 years Old</li>
+                        </ul>
+                        <ul class="team-wish-list">
+                            <li><i class="fas fa-heart color-red"></i><span>25</span></li>
+                            <li><i class="fas fa-star color-yellow"></i><span>48</span></li>
+                            <li><i class="fas fa-thumbs-up color-curious-blue"></i><span>56</span></li>
+                            <li><i class="fas fa-thumbs-down color-curious-blue"></i><span>21</span></li>
+                        </ul>
+                    </div>
+                </div>
+       -->       
+                
+            </div>
+			<div class="row justify-content-center ml-b-30" id="list_menber">
+			</div>
+        </div>
+    </section>
+    <!-- team-section end -->
+
+
+    <!-- member-details-slide section start -->
+    <section class="member-details-slide-section pd-t-120">
+        <div class="container">
+            <div class="member-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="member-details-slider-thumb">
+                                    <img src="imgs/douluo.jpg" alt="member" class="member_details_img";>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="member-details-slider-content">
+                                    <h2 class="title wow fade-in-up" data-wow-duration="1s" data-wow-delay="0.5s" style="margin-top: 5px;">小舞 & 唐三</h2>
+                                    <h4 class="sub-title wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">唐三喜欢小舞，小舞也喜欢唐三。唐三喜欢小舞，小舞也喜欢唐三。唐三喜欢小舞，小舞也喜欢唐三。唐三喜欢小舞，小舞也喜欢唐三。</h4>
+                                    <p class="wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">唐三追小舞，小舞追唐三，两人相爱生子。唐三追小舞，小舞追唐三，两人相爱生子。唐三追小舞，小舞追唐三，两人相爱生子。唐三追小舞，小舞追唐三，两人相爱生子。唐三追小舞，小舞追唐三，两人相爱生子。唐三追小舞，小舞追唐三，两人相爱生子。</p>
+                                    <a href="member-details.html" class="cmn-btn wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">查看详情</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="member-details-slider-thumb">
+                                    <img src="assets/images/team/member-8.png" alt="member">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="member-details-slider-content">
+                                    <h2 class="title wow fade-in-up" data-wow-duration="1s" data-wow-delay="0.5s">Jons & Natalie</h2>
+                                    <h4 class="sub-title wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">Conubia eleifend porttitor donec etiam sitorpce erat turpis massa arcu elementum, etiam semper neque fames eros vehicula maecenas, cum urna, odio turpis sed nonummy, et ut posuere nibh suspendisse. </h4>
+                                    <p class="wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, varius nunc. Nonummy tellus nibh ut suspendisse, velit nam maecenas dictum,vehicula tellus montes scelerisque elit sem. Dolor sed etiam amet mauris porta. Sodales pellentesque, mauris quis eget at. Tincidunt aptent vel mus sem ac. Nunc pede vestibulum aliquam, vestibulum dignissim nulla ac, vitae feugiat wisi accumsan rutrum justo ligula</p>
+                                    <a href="#0" class="cmn-btn wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">view details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="member-details-slider-thumb">
+                                    <img src="assets/images/team/member-8.png" alt="member">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="member-details-slider-content">
+                                    <h2 class="title wow fade-in-up" data-wow-duration="1s" data-wow-delay="0.5s">Jons & Natalie</h2>
+                                    <h4 class="sub-title wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">Conubia eleifend porttitor donec etiam sitorpce erat turpis massa arcu elementum, etiam semper neque fames eros vehicula maecenas, cum urna, odio turpis sed nonummy, et ut posuere nibh suspendisse. </h4>
+                                    <p class="wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, varius nunc. Nonummy tellus nibh ut suspendisse, velit nam maecenas dictum,vehicula tellus montes scelerisque elit sem. Dolor sed etiam amet mauris porta. Sodales pellentesque, mauris quis eget at. Tincidunt aptent vel mus sem ac. Nunc pede vestibulum aliquam, vestibulum dignissim nulla ac, vitae feugiat wisi accumsan rutrum justo ligula</p>
+                                    <a href="#0" class="cmn-btn wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">view details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="counter-area counter-area-two counter-area--style wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.9s">
+                <div class="row justify-content-end ml-b-30">
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center mrb-30">
+                        <div class="counter-item">
+                            <h2 class="counter-number">15000</h2>
+                            <span class="counter-content">weman online</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center mrb-30">
+                        <div class="counter-item">
+                            <h2 class="counter-number">15000</h2>
+                            <span class="counter-content">men online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- member-details-slide section end -->
+
+
+    <!-- package-section start -->
+    <section class="package-section pd-t-120">
+        <div class="container">
+            <div class="row ml-b-30">
+                <div class="col-lg-4 col-md-6 col-sm-8 mrb-30 wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="package-left-content">
+                        <h2 class="title">缘起7缘，一世情缘 </h2>
+                        <p>7缘网站全心全意为广大单身高质量人类打造完美婚恋平台。促成世间的良缘婚恋即为我们的使命。 </p>
+                        <a href="member-hwh.html" class="cmn-btn">欢迎您的加入</a>
+                    </div>
+                </div>
+                <div class="col-lg-8 mrb-30">
+                    <div class="package-right-area">
+                        <div class="row ml-b-30">
+                            <div class="col-lg-6 col-md-6 mrb-30 wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.8s">
+                                <div class="package-item">
+                                    <div class="package-thumb text-center">
+                                        <img src="assets/images/price/package-1.png" alt="package">
+                                    </div>
+                                    <div class="package-details">
+                                        <h3 class="title">注册即为会员</h3>
+                                        <ul class="package-list">
+                                            <li>终身会员<span>yes</span> </li>
+                                            <li>个人信息安全性 <span>100%</span></li>
+                                            <li>免费通知  <span>Yes</span></li>
+                                        </ul>
+                                        <div class="package-btn text-center">
+                                            <a href="#" class="btn-border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mrb-30 wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="1s">
+                                <div class="package-item">
+                                    <div class="package-thumb text-center">
+                                        <img src="assets/images/price/package-2.png" alt="package">
+                                    </div>
+                                    <div class="package-details">
+                                        <h3 class="title">相遇便是缘</h3>
+                                        <ul class="package-list">
+                                            <li>终身会员 <span>yes</span> </li>
+                                            <li>个人信息安全性 <span>100%</span></li>
+                                            <li>免费通知  <span>Yes</span></li>
+                                        </ul>
+                                        <div class="package-btn text-center">
+                                            <a href="#" class="btn-border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;缘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- package-section end -->
+
+
+    <!-- brand-section start -->
+    <div class="brand-section ptb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="brand-wrapper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-1.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-2.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-3.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-4.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="BrandSlider">
+                                    <div class="brand-item">
+                                        <img src="assets/images/brand/brand-5.png" alt="logo images">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand-section end -->
+
+	<!-- footer -->
+	<iframe src="footer.html" align="center"  width="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+<!-- jquery -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- migarate-jquery -->
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<!-- bootstrap js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- magnific-popup js -->
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<!-- isotope -->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!-- nice-select js-->
+<script src="assets/js/jquery.nice-select.js"></script>
+<!-- swipper js -->
+<script src="assets/js/swiper.min.js"></script>
+<!-- waypoints js link -->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<!-- counterup js -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- wow js file -->
+<script src="assets/js/wow.min.js"></script>
+<!-- main -->
+<script src="assets/js/main.js"></script>
+<script type="text/javascript">
+//获取当前用户信息
+$(function(){
+	var user = sessionStorage.getItem("user");
+	if(null != user && '' != user){
+		user = JSON.parse(user);
+		if(user.idCard != null && user.idCard != ''){
+			$("#user_name").html(user.realName);
+			dolist();
+		}
+	}else{
+		location = "/qiyuan/youke/youke-main.html";   //user，说明未登录，回到游客页面
+	}
+});
+//获取页面推荐成员
+function dolist(){
+	var user = sessionStorage.getItem("user");
+	user = JSON.parse(user);
+	gender = user.sex;
+    //获取当前用户的性别进行推荐甄选
+	if(gender == "女"){
+		sexuality = "男";
+	}else{
+		sexuality = "女";
+	}
+	var l = form1.language.value;
+	var s = form1.state.value;
+	var params = {
+			food:form1.food.value,
+			sex:sexuality
+		}
+	if(l == "语言" ){
+			if(s == "婚恋"){
+				var params = {
+						food:form1.food.value,
+						sex:sexuality
+					}
+			}else{
+				var params = {state:form1.state.value,food:form1.food.value,sex:sexuality}
+			}
+		}else{
+			var params = {language:form1.language.value,food:form1.food.value,state:form1.state.value,sex:sexuality}
+		}
+	
+	
+	$.get("/qiyuan/UserController/selectUser.do",params,function(users){
+		if(null != users && users.length > 0){
+			$("#list_menber").empty();
+			 for(i = 0; i < users.length; i++){
+				var user1 = users[i];
+				if(user.idCard == user1.idCard){
+					continue;
+				}else{
+					$("#list_menber")
+						.append($("<div class='col-lg-4 col-md-6 col-sm-8 mrb-30 wow fade-in-bottom' data-wow-duration='1s' >")
+							.append($("<div class='team-thumb'>")
+								.append($('<img src="/qiyuan/imgs/'+user1.imgId+'" alt="team" class="img12">'))
+								.append($('<div class="team-thumb-overlay">')
+									.append($('<a class="image-popup" title="team image" href="/qiyuan/imgs/'+user1.imgId+'" >')
+										.append($('<i class="flaticon-add-1">')		
+										))))
+							.append($("<div class='team-details text-center'>")
+								.append($('<h3 class="title">')
+									.append($("<a style='cursor:pointer' onclick='find(\""+user1.idCard+"\")'>").html(user1.realName)	
+									))
+								.append($('<ul class="team-content">')
+										.append($('<li>').html(user1.area))
+										.append($('<li>').html(user1.age+"岁"))
+									)
+								.append($('<ul class="team-wish-list">')
+										.append($('<li>')
+											.append($('<i class="fas fa-heart color-red">'))
+											.append($("<span>").html(1)))
+										.append($('<li>')
+											.append($('<i class="fas fa-star color-yellow">'))
+											.append($("<span>").html(2)))
+										.append($('<li>')
+											.append($('<i class="fas fa-thumbs-up color-curious-blue">'))
+											.append($("<span>").html(3)))
+										.append($('<li>')
+											.append($('<i class="fas fa-thumbs-down color-curious-blue">'))
+											.append($("<span>").html(4))))
+						)
+					)
+				}
+				$(".img12").css({ "min-width":"360px" ,"max-width":"360px" ,"min-height":"400px" ,"max-height":"400px"});
+			}
+		}else{
+			$("#list_menber").empty();
+		}
+	},"json")
+}
+function find(idCard){
+	$.post("/qiyuan/UserController/selectUser.do",{idCard:idCard},function(user){
+		if(user.length != 0){
+			sessionStorage.setItem("friend",JSON.stringify(user[0]));
+			location = "/qiyuan/member-details-friend.html";
+		}else{
+			alert("用户不存在！！！");	
+		}
+	})
+	}
+</script>
+</body>
+</html>

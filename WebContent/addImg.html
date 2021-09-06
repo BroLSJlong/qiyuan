@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style>
+		.imgsubmit{border-radius:5px;background-color:#5BC0DE}
+		img{float: left;}
+		span{color: red;float: right;}
+		ul{list-style: none;display: inline;}
+		#main{width: 700px;height: 900px;margin: 0 auto;}
+		h1{text-align: center;color: #006699;}
+		h3{color: dodgerblue;}
+		#i2{width: 150px;height: 50px;float: right;background-color: skyblue;}
+		
+	</style>
+</head>
+<body>
+	<h1>上传相册</h1>
+	<div id="main">
+		<h3>相册</h3>
+		<div class="modal fade" id="updateImg" >
+				<div class="modal-content " style="overflow: hidden">
+					<div class="modal-body">
+						<ul id="imgs" class="img-list lightgray-bg b my-panel-diy">
+							<li style=" width:'170px'; height:'170px';">
+								   <!-- <input type="radio" class="hide" value="img/img-7.jpg" name="checkImg"> -->
+									<img  id="previewImg0" width="150px" height="170px" src="img/user.jpg">
+							</li>
+						</ul>
+				</div>
+			</div>
+		</div>
+		<div id="f" class="right">
+			<form class="forms" id="form0" enctype="multipart/form-data" name="imgForm" style="width: 320px;float: left;">
+				<input class="imgsubmit" type="file" id="image-file0" name="img" accept="image/*" onchange="selectImg()"  />
+			</form>
+		</div>
+		<br>
+		<input id="i2" type="button" onclick="add()" name="" id="" value="上传" />
+	</div>
+<!-- jquery -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- migarate-jquery -->
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<!-- bootstrap js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- magnific-popup js -->
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<!-- isotope -->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!-- nice-select js-->
+<script src="assets/js/jquery.nice-select.js"></script>
+<!-- swipper js -->
+<script src="assets/js/swiper.min.js"></script>
+<!-- waypoints js link -->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<!-- counterup js -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- wow js file -->
+<script src="assets/js/wow.min.js"></script>
+<!-- main -->
+<script src="assets/js/main.js"></script>
+
+<script>
+	var count = 0;
+	function selectImg(){
+		var imgURL = getObjectURL(document.getElementById("image-file"+count).files[0]);
+		$("#previewImg"+count).attr("src",imgURL);
+		$("#image-file"+count).css("display","none");
+		count++;
+		node1 = '<li style=" width=\'170px\'; height=\'170px\';">'+
+				' <img  id="previewImg'+count+'" width="170px" height="170px" src="img/user.jpg">'+
+				'</li>';
+			
+		node2 ='<form class="forms" id="form'+count+'" enctype="multipart/form-data" style="width: 320px;float: left;">'+
+				'<input class="imgsubmit" type="file" id="image-file'+count+'" name="img" accept="image/*" onchange="selectImg()"  />'
+				+'</form>';
+		$("#imgs").append(node1);
+		$("#f").append(node2);
+	}
+
+	function getObjectURL(file) {
+		var url = null ;
+		if (window.createObjectURL!=undefined) { // basic
+			url = window.createObjectURL(file) ;
+		} else if (window.URL!=undefined) { // mozilla(firefox)
+			url = window.URL.createObjectURL(file) ;
+		} else if (window.webkitURL!=undefined) { // webkit or chrome
+			url = window.webkitURL.createObjectURL(file) ;
+		}
+		return url ;
+	}
+
+	/**将相片上传到dynamicDetail表*/
+	function changeImg(userId){
+		count = 1;
+		f = $(".forms");
+		for(i=0;i<f.length-1;i++){
+			var imgForms = new FormData(f[i]);
+			$.ajax({
+				type:"post",
+				url:"/qiyuan/ImgController/upLoadImg.do?idCard="+userId,
+				data:imgForms,
+				processData: false,
+				contentType: false,
+				success:function(b){
+					if(b){
+						if(count == f.length - 1){
+							alert("上传成功！");
+							location = "/qiyuan/addImg.html";
+						}
+						count++;
+					}
+				}
+			});
+		}
+		
+	}
+</script>
+
+<script>
+	
+function add(){
+	/**获取用户信息*/
+	user = sessionStorage.getItem("user");
+	user = JSON.parse(user);
+	if(null != user && '' != user){
+		changeImg(user.idCard);
+	}else{
+		location = "/qiyuan/signin.html";
+	}
+}
+</script>
+</body>
+</html>

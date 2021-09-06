@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>7缘后台管理系统</title>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
+	</head>
+
+	<body>
+		<div class="page-content-wrap">
+				<form class="layui-form" name="form1">
+					<div class="layui-form-item">
+						<div class="layui-inline tool-btn">
+							<button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs" data-url="menu-add2.html"><i class="layui-icon">&#xe654;</i></button>
+							<button class="layui-btn layui-btn-small layui-btn-warm  hidden-xs" data-url="menu2.html"><i class="iconfont">&#xe656;</i></button>
+						</div>
+						<div class="layui-inline">
+							<input type="text" name="idCard" placeholder="请输入身份证" autocomplete="off" class="layui-input">
+						</div>
+					
+						<input type="button" onclick="doList()" value="查询"/>
+					</div>
+				</form>
+				<div class="layui-form" id="table-list">
+					<table class="layui-table" lay-even lay-skin="nob">
+						<colgroup>
+							<col width="50">
+							<col class="hidden-xs" width="50">
+							<col class="hidden-xs" width="100">
+							<col width="80">
+							<col>
+							<col width="150">
+						</colgroup>
+						<thead>
+							<tr>
+								<th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
+								<th class="hidden-xs">ID</th>
+								<th class="hidden-xs">用户名</th>
+								<th class="hidden-xs">姓名</th>
+								<th style="float: left;">性别</th>
+								<th>操作</th>
+							</tr>
+							
+						</thead>
+						
+						<tbody id="table1" ></tbody>
+					</table>
+				</div>
+		</div>
+		<script src="../../../jquery-1.8.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+		$(function(){			
+			doList();
+		});
+		
+		function doList(){
+			$.get("/qiyuan/UserController/selectUser.do",{idCard:form1.idCard.value},function(users){
+				if(null != users && users.length > 0){
+					$("#table1").empty("");
+					
+					for(i = 0; i < users.length; i++){
+						var user = users[i];
+						$("#table1").append(
+							$("<tr>")
+							.append($("<td>").append($("<input type='checkbox' lay-skin=\"primary\" data-id='1'>")))
+							.append($("<td>").html(user.idCard))
+							.append($("<td>").html(user.userName))
+							.append($("<td>").html(user.realName))
+							.append($("<td>").html(user.sex))
+							.append(
+										$("<td>")
+											.append("<button class='layui-btn layui-btn-mini layui-btn-normal '  onclick='doUpdate(\""+user.idCard+"\")'>修改</button> ")
+											.append("<button class='layui-btn layui-btn-mini layui-btn-danger '   onclick='doDelete(\""+user.idCard+"\")'>删除</button> ")
+									)
+						);
+					}
+				}
+			},"json")
+		}
+		
+		function doUpdate(idCard){
+			$.post("/qiyuan/UserController/selectUser.do",{idCard:idCard},function(user){
+				if(user.length != 0){
+					sessionStorage.setItem("user",JSON.stringify(user[0]));
+					location = "/qiyuan/PreInfo.html";
+				}else{
+					alert("数据库有问题！！！");	
+				}				
+			})
+
+		}
+		
+		function doDelete(idCard){
+			$.post("/qiyuan/UserController/deleteUser.do",{idCard:idCard},function(ret){
+				if(ret == false){
+					alert("删除失败！");
+				}else{
+					doList();
+				}
+			});
+		}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,294 @@
+.banner {
+    position: absolute;
+	clear: both;
+    width: 100%;
+    top: 64px;
+    left: 0;
+}
+.banner .flexslider {
+	min-width: 1200px;
+	min-height: 1100px;
+	background-color: #f3f3f3;
+    position: relative;
+    overflow: hidden;
+}
+.index_box{
+	margin: 0 auto;
+	width: 1220px;
+	position: relative;
+}
+.index_box .index_left_box {
+	z-index: 1;
+	width: 250px;
+	height: 700px;
+	float: left;
+	margin: 30px 90px;
+	background-color: #ffeff0;
+	position: absolute;
+}
+.index_left_box .boder_line{
+	margin-top: 35px;
+	position: absolute;
+	width: 130px;
+	height: 655px;
+	border-right: #a39a9f solid 2px;
+}
+.index_left_box .index_love{
+	margin-left: 114px;
+	margin-top: 10px;
+}
+.index_left_box .index_love::before{
+	font-size: 30px;
+	font-weight: 700;
+	color: #ff42ae;
+	right: 0%;
+	content: '\f004';
+	font-family: 'Font Awesome 5 Free';
+}
+.index_left_box .list_page_bg{
+	height: 60px;
+	width: 160px;
+	position: absolute;
+	background-color: #fd463e;
+}
+.index_left_box .list_page_1{
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	margin-top: 20px;
+	margin-left: 60px;
+}
+.index_left_box .list_page_2{
+	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+	margin-top: 120px;
+	margin-left: 40px;
+}
+.index_left_box .list_page_3{
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	margin-top: 220px;
+	margin-left: 60px;
+}
+.index_left_box .list_page_4{
+	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+	margin-top: 320px;
+	margin-left: 40px;
+}
+.index_left_box .list_page_5{
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	margin-top: 420px;
+	margin-left: 60px;
+}
+.index_left_box .index_love_1{
+	position: absolute;
+	margin-top: 510px;
+	margin-left: 28px;
+	width: 100px;
+	height: 100px;
+}
+.index_left_box .index_love_3{
+	position: absolute;
+	margin-top: 540px;
+	margin-left: 130px;
+	width: 100px;
+	height: 100px;
+}
+.list_page_bg .navTitle {
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+}
+.list_page_bg .navTitle a {
+	height: 60px;
+	width: 160px;
+    text-align: center;
+    color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+    background-color: #EA0D04;
+}
+.list_page_bg .navTitle a:hover{
+	text-decoration: none;
+    background-color: #EA0D04;
+}
+.list_page_bg .list_text{
+	margin-top: 15px;
+}
+.list_page_bg .icon {
+	margin-left: 14px;
+    background-image: url(../img/icon.png);
+	background-repeat: no-repeat;
+    width: 28px;
+    height: 41px;
+	display: inline-block;
+	vertical-align: top;
+}
+.list_page_bg .icon_nav_1 {
+	margin-left: 20px;
+    background-position: 2px -180px;
+}
+.list_page_bg .icon_nav_2 {
+	margin-left: -20px;
+    background-position: 0px -80px;
+}
+.list_page_bg .icon_nav_3 {
+	margin-left: 20px;
+    background-position: 0px -128px;
+}
+.list_page_bg .icon_nav_4{
+	margin-left: -20px;
+    background-image: url(../img/icon2.png);
+    background-position: 0 23px;
+}
+.list_page_bg .icon_nav_5 {
+	margin-left: 20px;
+    background-position: 0px 19px;
+}
+.list_page_bg:hover .icon_nav_1{
+    background: url(../img/nav_gif_1.gif) no-repeat 0px -1px
+}
+.list_page_bg:hover .icon_nav_2{
+    background: url(../img/nav_gif_2.gif) no-repeat -1px -2px;
+}
+.list_page_bg:hover .icon_nav_3{
+    background: url(../img/nav_gif_3.gif) no-repeat -1px -2px;
+}
+.list_page_bg:hover .icon_nav_4{
+    background: url(../img/nav_gif_4.gif) no-repeat -1px 0px;
+}
+.list_page_bg:hover .icon_nav_5{
+    background: url(../img/nav_gif_5.gif) no-repeat -1px -2px;
+}
+.index_box .index_right_box {
+	width: 700px;
+	height: 600px;
+	margin: 45px 440px;
+	background-color: #ffeff0;
+}
+.padding {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+	background-color: #ffeff0;
+}
+.index_more{
+	margin-top: -20px ;
+	width: 40px;
+	float: right;
+	text-align: center;
+}
+.border_1{
+	border: #EEEEEE solid 1px;
+}
+.text{
+	color: #8d8d8d;
+}
+.index_list {
+    margin: 10px -4px 0 -50px;
+}
+.index_list > ul {
+    overflow: hidden;
+    margin: 0 5px;
+}
+.index_list > ul > li {
+    list-style: none;
+    width: 33%;
+    float: left;
+    margin-bottom: 20px;
+}
+.index_list .box {
+    margin: 0 8px;
+    border: #EEEEEE solid 1px;
+    height: 344px;
+}
+.index_list .box:hover{
+    border: #ff0000 solid 1px;
+}
+.index_list .box .pic_box {
+    height: 246px;
+    overflow: hidden;
+}
+.index_list .box .pic {
+    display: block;
+    height: 246px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+.index_list .box .pic:hover{
+    transform: scale(1.05,1.05);
+}
+.index_list .box .pic .shade {
+    padding-top: 246px;
+    opacity: 0;
+	-webkit-transition: opacity 0.25s linear 0s;
+}
+.index_list .box .pic .shade:hover{
+    padding-top: 0;
+    opacity:1;
+}
+.index_list .box .pic .shade > div {
+    height: 246px;
+    width: 222px;
+    background-image: url(../img/lover_shade_img.png);
+    background-repeat: repeat;
+    background-position: center center;
+}
+.padding_5_l {
+    padding-left: 5px;
+}
+.padding_5_r {
+    padding-right: 5px;
+}
+.line_h_26 {
+    line-height: 26px;
+}
+.underline {
+    text-decoration: underline;
+}
+.font_B {
+    font-weight: bold;
+}
+.rgb_09f, .rgb_09f > a {
+    color: #0099ff;
+}
+.index_list .box .sex_0 {
+    background-position: -300px 0;
+}
+.index_list .box .sex_1 {
+    background-position: -250px 0;
+}
+.index_list .box .sex {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+.sex {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../img/img_icons.png);
+    background-repeat: no-repeat;
+}
+.size_12 {
+    font-size: 12px;
+}
+.rgb_666, .rgb_666 > a {
+    color: #666666;
+}
+.index_list .box .t1 {
+    color: #999999;
+    height: 44px;
+    overflow: hidden;
+}
+.container{
+	position: absolute;
+	margin-left: 300px;
+}
+.container .row{
+	margin-top: -250px;
+	width: 1200px;
+}
+.container .row .swiper-slide{
+	float: left;
+	width: 20%;
+}
